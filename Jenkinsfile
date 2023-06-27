@@ -36,7 +36,7 @@ pipeline {
         }
     }
 
-    Stage ('Deploying apache container to kubernetes') {
+    Stages ('Deploying apache container to kubernetes') {
         steps {
             script {
                 kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
